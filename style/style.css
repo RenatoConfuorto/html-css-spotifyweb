@@ -9,3 +9,63 @@ html{
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+/* MAIN  */
+main{
+    /* background-color:red; */
+    /* debug: */
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: row;
+}
+
+/* aside  */
+aside{
+    background-color: black;
+    height: 100%;
+    width: 200px;
+}
+
+/* section  */
+section{
+    background-color: blue;
+    /* debug: */
+    width: calc(100% - 200px);
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+}
+
+/* main section  */
+.upgrade{
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(90, 90, 90, 0.7);
+    position: fixed;
+    z-index: 100;
+}
+
+/* navigation bar  */
+nav{
+    background-color: green;
+    height: 3rem;
+    width: 50%;
+    /* debug: */
+    margin: 0 auto;
+    margin-top: 4.5rem;
+}
+
+/* muisic section  */
+.music{
+    background-color: pink;
+    height: 600rem;
+    /* debug: */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* FOOTER  */
+footer{
+    background-color: grey;
+    height: 6rem;
+}
