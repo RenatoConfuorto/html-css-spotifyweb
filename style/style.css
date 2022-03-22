@@ -1,3 +1,8 @@
+:root{
+    --footer-height: 6rem;
+    --sidebar-width: 200px;
+    --cta-height: 7rem;
+}
 /* RESET  */
 *{
     margin: 0;
@@ -30,70 +35,109 @@ img{
 main{
     /* background-color:red; */
     /* debug: */
-    height: calc(100vh - 6rem);
+    height: calc(100vh - var(--footer-height));
     display: flex;
     flex-direction: row;
 }
 
 /* aside  */
-aside{
+.sidebar{
     position: relative;
     background-color: black;
     height: 100%;
-    width: 200px;
-    padding-left: 15px;
+    width: var(--sidebar-width);
+    padding: 0 10px;
+    overflow: hidden;
 }
 
-aside .logo{
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 5rem);
+    min-height: 350px;
+}
+
+.sidebar-top .logo{
     /* background-color: blue; */
     /* debug: */
     position: relative;
-    height: 7rem;
+    height: 70px;
+    margin-bottom: 10px;
 }
-aside .logo img{
+.sidebar-top .logo img{
     width: 80%;
 }
 
-aside .side-options{
-    /* background-color: yellow; */
-    /* height: 10rem; */
-    /* debug: */
+.sidebar-top .side-options{
+    margin-bottom: 10px;
 }
-aside .side-options img{
+.sidebar-top .side-options img{
     display: inline-block;
-    /* margin-left: 10px; */
     width: auto;
     height: 2.5rem
 }
-aside .side-options li{
+.sidebar-top .side-options li{
     display: flex;
     align-items: center;
 }
-aside .side-options a{
+.sidebar-top .side-options a{
     margin-left: 10px;
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
 }
-aside .side-options a:hover{
+.sidebar-top .side-options a:hover{
     font-weight: bold;
 }
 
-aside .playlist{
+.sidebar-top .playlist{
     background-color: pink;
-    height: 25rem;
     /* debug: */
+    overflow: hidden;
+    flex-grow: 1;
+}
+.sidebar-top .playlist-header{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.sidebar-top .playlist-items{
+    /* height: 100px; */
+    /* debug:  */
+    height: 60%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.sidebar-top .playlist a{
+    /* background-color: red; */
+    /* debug: */
+    display: inline-block;
+    padding: 0.1rem 0;
     margin-top: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+/* add icon with css */
+.sidebar-top .playlist a>span{
+    background-color: #a3a3a3;
+    /* debug: */
+    margin-right: 10px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
 }
 
-aside .profile{
+.sidebar .profile{
     background-color: tomato;
-    height: 5rem;
     /* debug: */
-    width: calc(100% - 15px);
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    width: 100%;
+    height: 5rem;
 }
 
 
@@ -102,23 +146,23 @@ aside .profile{
 section{
     background-color: #242630;
     /* debug: */
-    width: calc(100% - 200px);
-    height: calc(100vh - 6rem);
+    width: calc(100% - var(--sidebar-width));
+    height: calc(100vh - var(--footer-height));
     overflow-y: auto;
 }
 
 /* main section  */
-.upgrade{
+.upgrade-cta{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: calc(100% - 200px);
-    height: 7rem;
+    width: calc(100% - var(--sidebar-width));
+    height: var(--cta-height);
     background-color: rgba(25, 23, 34, 0.5);
     position: fixed;
     z-index: 100;
 }
-.upgrade .btn{
+.upgrade-cta .btn{
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
@@ -130,7 +174,7 @@ section{
     border: 2px solid white;
     transition: all 0.3s;
 }
-.upgrade .btn:hover{
+.upgrade-cta .btn:hover{
     transform: scale(1.1);
 }
 
@@ -178,5 +222,5 @@ nav{
 /* FOOTER  */
 footer{
     background-color: #171717;
-    height: 6rem;
+    height: var(--footer-height);
 }
