@@ -262,7 +262,6 @@ main {
 section {
   background-color: #242630;
   float: left;
-  padding: 0 15px;
   width: calc(100% - var(--sidebar-width));
   height: calc(100vh - var(--footer-height));
   overflow-y: auto;
@@ -327,11 +326,15 @@ nav {
 .music {
   width: 100%;
   margin-top: 20px;
+  padding: 0 15px;
+}
+.music .music-row{
+  margin-bottom: 20px;
 }
 .music .row-header{
   font-size: 2rem;
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .music .music-list{
   display: flex;
@@ -359,6 +362,11 @@ nav {
   color: var(--main-text-color);
 }
 
+.music .music-row>h4{
+  color: var(--main-text-color);
+  margin-bottom: 25px;
+}
+/* layover card  */
 .music i{
   position: absolute;
   left: 50%;
@@ -368,7 +376,6 @@ nav {
   font-size: 5rem;
   display: none;
 }
-/* layover card  */
 .music .music-thumb:hover{
   cursor: pointer;
 }
@@ -379,6 +386,12 @@ nav {
   display: block;
 }
 
+/* round card */
+
+.round-card{
+  border-radius: 50%;
+  overflow: hidden;
+}
 /* FOOTER  */
 footer {
   background-color: #171717;
