@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Style  -->
-    <link rel="stylesheet" href="style/style.css">
-    <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Style  -->
+  <link rel="stylesheet" href="style/style.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-    <title>Spotify</title>
+  <title>Spotify</title>
 </head>
+
 <body>
-    <!-- MAIN  -->
-    <main class="clearfix">
+  <!-- MAIN  -->
+  <main class="clearfix">
 
-        <!-- aside menu  -->
-        <aside class="sidebar">
-            <div class="sidebar-top">
-                    <!-- logo spotify  -->
-                <div class="logo">
-                    <img src="img/logo.svg" alt="Spotify Logo" class="center">
-                </div>
+    <!-- aside menu  -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <!-- logo spotify  -->
+        <div class="logo side-padding">
+          <img src="img/logo.svg" alt="Spotify Logo" class="regular">
+          <img src="img/logo-small.svg" alt="Spotify Logo Small" class="responsive">
+        </div>
 
-                <!-- side option  -->
-                <div class="side-options">
-                    <ul class="option-list">
-                        <li class="active"><img src="img/home.svg" alt="Home icon"><a href="#">Home</a></li>
-                        <li><img src="img/search.svg" alt="Search icon"><a href="#">Cerca</a></li>
-                        <li><img src="img/libreria.svg" alt="Library icon"><a href="#">La tua libreria</a></li>
-                    </ul>
-                </div>
+        <!-- side option  -->
+        <div class="side-options">
+          <ul class="option-list">
+            <li class="active"><a href="#"><img src="img/home.svg" alt="Home icon"><span>Home</span></a></li>
+            <li><a href="#"><img src="img/search.svg" alt="Search icon"><span>Cerca</span></a></li>
+            <li><a href="#"><img src="img/libreria.svg" alt="Library icon"><span>La tua libreria</span></a></li>
+          </ul>
+        </div>
 
-                <!-- playlist -->
-                <div class="playlist">
-                    <h3 class="playlist-header">Playlist</h3>
-                    <div class="new-playlist">
-                        <span>+</span>
-                        <a href="#">Crea Playist</a>
-                    </div>
-                        <div class="playlist-items">
-                            <ul>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                                <li><a href="#">Nuova Playlist</a></li>
-                            </ul>
-                        </div>
-                </div>
-            </div>
+        <!-- playlist -->
+        <div class="playlist side-padding">
+          <h3 class="playlist-header">Playlist</h3>
+          <div class="new-playlist">
+            <span>+</span>
+            <a href="#">Crea Playist</a>
+          </div>
+          <div class="playlist-items">
+            <ul>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+              <li><a href="#">Nuova Playlist</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-            <!-- profile tag  -->
-            <div class="profile">
-                <div class="download-app">
-                    <img src="img/download.svg" alt="Downlaod icon">
-                    <a href="#">Installa app</a>
-                </div>
-                <div class="name-tag">
-                    <img src="img/profile.svg" alt="Profile image">
-                    <a href="#">John Doe</a>
-                </div>
-            </div>
-        </aside>
+      <!-- profile tag  -->
+      <div class="profile side-padding">
+        <div class="download-app">
+          <a href="#"><img src="img/download.svg" alt="Downlaod icon"><span>Installa app</span></a>
+        </div>
+        <div class="name-tag">
+          <a href="#"><img src="img/profile.svg" alt="Profile image"><span>John Doe</span></a>
+        </div>
+      </div>
+    </aside>
 
-        <!-- main section  -->
-        <section>
+    <!-- main section  -->
+    <section>
 
-            <!-- upgrade div  -->
-            <div class="upgrade-cta">
-                <a href="#" class="btn">Effettua l'upgrade</a>
-            </div>
+      <!-- upgrade div  -->
+      <div class="upgrade-cta">
+        <a href="#" class="btn">Effettua l'upgrade</a>
+      </div>
 
 
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="#" class="active">In Evidenza</a></li>
-                    <li><a href="#">Podcast</a></li>
-                    <li><a href="#">Classifiche</a></li>
-                    <li><a href="#">Generi e Mood</a></li>
-                    <li><a href="#">Nuove uscite</a></li>
-                    <li><a href="#">Scopri</a></li>
-                </ul>
-            </nav>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#" class="active">In Evidenza</a></li>
+          <li><a href="#">Podcast</a></li>
+          <li><a href="#">Classifiche</a></li>
+          <li><a href="#">Generi e Mood</a></li>
+          <li><a href="#">Nuove uscite</a></li>
+          <li><a href="#">Scopri</a></li>
+        </ul>
+      </nav>
 
-            <!-- music section  -->
-            <div class="music">
+      <!-- music section  -->
+      <div class="music">
 
-                    <div class="music-row">
+        <div class="music-row">
 
-                    </div>
+        </div>
 
-                    <div class="music-row">
+        <div class="music-row">
 
-                    </div>
+        </div>
 
-                    <div class="music-row">
+        <div class="music-row">
 
-                    </div>
-            </div>
-        </section>
-    </main>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- FOOTER  -->
-    <footer>
+  <!-- FOOTER  -->
+  <footer>
 
-    </footer>
+  </footer>
 </body>
+
 </html>
