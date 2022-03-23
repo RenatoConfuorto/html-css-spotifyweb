@@ -421,7 +421,7 @@ footer {
 
 /* current song section  */
 .current-song{
-  background-color: pink;
+  /* background-color: pink; */
   /* debug:  */
   height: 100%;
   width: 200px;
@@ -429,19 +429,53 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: var(--sidebar-padding);
+  padding-left: 5px;
 }
 .current-song .song{
-  background-color: violet;
+  /* background-color: violet; */
   /* debug:  */
   height: 40px;
   width: 60%;
+  display: flex;
+  align-items: center;
 }
+.current-song .song img{
+  height: 100%;
+  width: auto;
+}
+.current-song .song div{
+  margin-left: 10px;
+}
+.current-song .song h4{
+  font-weight: bolder;
+  font-size: 10px;
+  color: white;
+}
+.current-song .song h5{
+  color: var(--main-text-color);
+}
+
+
 .current-song .icons{
-  background-color:aqua;
+  /* background-color:aqua; */
   /* debug:  */
   height: 40px;
   width: 30%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-song .icons i{
+  font-size: 13px;
+  margin-left: 5px;
+  /* line-height: 40px; */
+  color: white;
+  opacity: 0.5;
+}
+.current-song .icons i:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* play song section  */
