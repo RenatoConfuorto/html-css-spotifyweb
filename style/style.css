@@ -325,9 +325,6 @@ nav {
 
 /* MUSIC SECTION  */
 .music {
-  /* background-color: pink; */
-  /* height: 6rem; */
-  /* debug: */
   width: 100%;
   margin-top: 20px;
 }
@@ -342,14 +339,13 @@ nav {
   flex-wrap: wrap;
 }
 .music .card{
-  /* background-color: blue; */
-  /* debug:  */
   width: calc(100% / 6 - 15px);
   height: auto;
   margin-right: 15px;
   text-align: center;
 }
 .music .music-thumb{
+  position: relative;
   margin-bottom: 10px;
 }
 .music .card h3{
@@ -361,6 +357,26 @@ nav {
 .music .card h4{
   line-height: 20px;
   color: var(--main-text-color);
+}
+
+.music i{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
+  display: none;
+}
+/* layover card  */
+.music .music-thumb:hover{
+  cursor: pointer;
+}
+.music .music-thumb:hover img{
+  opacity: 0.3;
+}
+.music .music-thumb:hover i{
+  display: block;
 }
 
 /* FOOTER  */
