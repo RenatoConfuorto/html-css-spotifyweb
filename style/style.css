@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 6rem;
+  --footer-height: 60px;
   --sidebar-width: 200px;
   --cta-height: 7rem;
 
@@ -414,4 +414,60 @@ nav {
 footer {
   background-color: #171717;
   height: var(--footer-height);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* current song section  */
+.current-song{
+  background-color: pink;
+  /* debug:  */
+  height: 100%;
+  width: 200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--sidebar-padding);
+}
+.current-song .song{
+  background-color: violet;
+  /* debug:  */
+  height: 40px;
+  width: 60%;
+}
+.current-song .icons{
+  background-color:aqua;
+  /* debug:  */
+  height: 40px;
+  width: 30%;
+}
+
+/* play song section  */
+.play-options{
+  background-color: blue;
+  /* debug:  */
+  height: 100%;
+  width: 40%;
+  /* min-width: 200px; */
+}
+
+
+/* volume options  */
+.volume-options{
+  background-color: yellow;
+  /* debug:  */
+  height: 100%;
+  width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .current-song,
+  .play-options,
+  .volume-options{
+    width: calc(100%/3);
+  }
+
 }
