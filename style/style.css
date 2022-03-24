@@ -413,7 +413,7 @@ nav {
 
 /* FOOTER  */
 footer {
-  background-color: #171717;
+  background-color: #282828;
   height: var(--footer-height);
 
   display: flex;
@@ -477,34 +477,36 @@ footer {
 
 /* play song section  */
 .play-options{
-  background-color: blue;
-  /* debug:  */
   height: 100%;
   width: 40%;
-  /* min-width: 200px; */
 }
 
-
-/* volume options  */
-.volume-options{
-  /* background-color: #ffff00; */
-  /* debug:  */
-  height: 100%;
-  width: 200px;
+.play-options .controls-btns{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 60%;
+}
+.play-options .controls-btns li{
+  display: inline-block;
+  color: white;
+  font-size: 13px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+.play-options .controls-btns .play-btn{
+  font-size: 25px;
+  transition: all 0.2s;
+  margin: 0 12px;
+}
+.play-options .controls-btns .play-btn:hover{
+  transform: scale(1.15);
 }
 
-.volume-options ul li{
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 10px;
-  color: white;
-}
-.volume-options .volume-control{
+/* progress bar common  */
+.bar-control{
   position: relative;
-  width: 100px;
   height: 4px;
   background-color: var(--main-text-color);
   border-radius: 5px;
@@ -520,6 +522,7 @@ footer {
 }
 .progress-bar:hover{
   background-color: green;
+  cursor: pointer;
 }
 .progress-bar:hover::after{
   position: absolute;
@@ -533,6 +536,48 @@ footer {
   height: 10px;
   border-radius: 50%;
   background-color: white;
+}
+/*  /progress bar common  */
+
+
+.play-options .play-control{
+  /* background-color: pink; */
+  /* debug:  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+}
+.play-options .play-control > div{
+  display: inline-block;
+}
+.play-options .bar-control{
+  width: 80%;
+  margin: 0 10px;
+}
+.play-options .song-time{
+  color: white;
+  font-weight: bold;
+}
+
+/* volume options  */
+.volume-options{
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume-options ul li{
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 10px;
+  color: white;
+}
+.volume-options .bar-control{
+  width: 100px;
 }
 
 @media screen and (max-width: 600px) {
