@@ -50,6 +50,7 @@ a:hover{
 }
 
 body {
+  min-width: 450px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -381,10 +382,10 @@ nav {
 .music .music-thumb:hover{
   cursor: pointer;
 }
-.music .music-thumb:hover img{
+.music .card:hover img{
   opacity: 0.3;
 }
-.music .music-thumb:hover i{
+.music .card:hover i{
   display: block;
 }
 
@@ -421,8 +422,6 @@ footer {
 
 /* current song section  */
 .current-song{
-  /* background-color: pink; */
-  /* debug:  */
   height: 100%;
   width: 200px;
 
@@ -431,49 +430,47 @@ footer {
   align-items: center;
   padding-left: 5px;
 }
-.current-song .song{
-  /* background-color: violet; */
-  /* debug:  */
+.current-song .song-cover{
   height: 40px;
-  width: 60%;
+  width: 20%;
   display: flex;
   align-items: center;
 }
-.current-song .song img{
+.current-song .song-cover img{
   height: 100%;
   width: auto;
 }
-.current-song .song div{
+.current-song .song-info{
   margin-left: 10px;
+  width: 40%;
 }
-.current-song .song h4{
+.current-song .song-name{
   font-weight: bolder;
-  font-size: 10px;
+  font-size: 13px;
   color: white;
 }
-.current-song .song h5{
-  color: var(--main-text-color);
+.current-song .song-info a:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 
 .current-song .icons{
-  /* background-color:aqua; */
-  /* debug:  */
   height: 40px;
-  width: 30%;
+  width: 20%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
-.current-song .icons i{
+.current-song .icons a{
   font-size: 13px;
   margin-left: 5px;
-  /* line-height: 40px; */
   color: white;
   opacity: 0.5;
 }
-.current-song .icons i:hover{
+.current-song .icons a:hover{
   opacity: 1;
   cursor: pointer;
 }
@@ -490,10 +487,52 @@ footer {
 
 /* volume options  */
 .volume-options{
-  background-color: yellow;
+  /* background-color: #ffff00; */
   /* debug:  */
   height: 100%;
   width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume-options ul li{
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 10px;
+  color: white;
+}
+.volume-options .volume-control{
+  position: relative;
+  width: 100px;
+  height: 4px;
+  background-color: var(--main-text-color);
+  border-radius: 5px;
+}
+.progress-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background-color: white;
+  border-radius: 5px;
+}
+.progress-bar:hover{
+  background-color: green;
+}
+.progress-bar:hover::after{
+  position: absolute;
+  bottom: 50%;
+  left: 100%;
+  transform: translate(-50%, 50%);
+
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 @media screen and (max-width: 600px) {
